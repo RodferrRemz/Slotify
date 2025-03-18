@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<title>Slot Machine Musical</title>
+</head>
+<body>
+<div class="wrapper">
+<h1 class="title">Slot Machine 🎰🎶</h1>
+ 
+        <div class="slot-machine">
+<div class="reels">
+<div class="reel"><span id="reel1" class="reel-text">🎵</span></div>
+<div class="reel"><span id="reel2" class="reel-text">🎵</span></div>
+<div class="reel"><span id="reel3" class="reel-text">🎵</span></div>
+</div>
+ 
+            <button class="lever" onclick="spin()">Pull Lever</button>
+<div id="message"></div>
+ 
+            <!-- YouTube Player -->
+<div id="youtubeContainer" style="display:none; margin-top: 20px;">
+<iframe id="youtubePlayer" width="560" height="315" 
+                        src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+ 
+            <!-- Add a button to open YouTube link -->
+<button class="lever" id="youtubeButton" style="display:none; margin-top: 20px; justify-content: center;"  onclick="openYouTubeLink()">Open YouTube</button>
+</div>
+</div>
+ 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
